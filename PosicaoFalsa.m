@@ -4,7 +4,7 @@ function [x] = PosicaoFalsa(E,a,n,m)
   while(I>E)
     x = ((n*F(m,a))-(m*F(n,a)))/(F(m,a)-F(n,a));
     f = F(x,a);
-    if(f<E)
+    if(abs(f)<E)
       h
       return
     endif
