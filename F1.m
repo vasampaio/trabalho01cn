@@ -6,5 +6,5 @@ function [n,m] = F1(a)
       break;
     endif
   endfor
-  n = m-1;
+  n = m-1+0.00001;
 endfunction
