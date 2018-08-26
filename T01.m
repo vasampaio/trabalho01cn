@@ -1,5 +1,5 @@
 
-choice = input("\nEscolha uma opcao:\n1 para rodar teste padrao\n2 para rodar teste customizado\n")
+choice = input("\nEscolha uma opcao:\n1 para rodar teste padrao\n2 para rodar teste customizado\n3 para calcular o valor maximo de a\n")
 
 switch(choice)
   case 1
@@ -56,6 +56,9 @@ switch(choice)
       disp("\nAltura Max:")
       max = F(PFD(E,a,k,y),a)
     endfor
+  case 3
+    disp("\nValor maximo de a")
+    max = Amax()
   otherwise
     disp("Opcao nao valida")
 endswitch
