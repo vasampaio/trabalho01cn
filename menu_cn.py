@@ -25,7 +25,6 @@ def print_blox():
 		print("")
 
 def credits():
-		clear_screen()
 		print("###########################################################")
 		print("#                                                         #")
 		print("#          UECE - Universidade Estadual do Ceará          #")
