@@ -7,29 +7,30 @@ switch(choice)
     E=0.00001;
     [k y] = F1(a);
     [n m] = Fase1(a);
-    if(F(PFD(E,a,k,y),a)<=2)
-      disp("\nO foguete nao ira explodir")
-    else
-      disp("\nO foguete ira explodir")
-  endif
+    
       disp("Isolamento:")
       disp(n)
       disp(m)
       disp("\nDistancia:")
       disp("\nPosicao Falsa:")
       d = PosicaoFalsa(E,a,n,m)
-      disp("Erro")
       erro = ErroAbsoluto(d,a)
+      pause()
       disp("\nNewton-Raphson")
       d1 = NewtonRaphson(E,a,m)
-      disp("Erro:")
       erro1 = ErroAbsoluto(d1,a)
+      pause
       disp("\nNewton-Raphson Mod")
       d2 = NewtonRaphsonMod(E,a,m)
-      disp("Erro:")
       erro2 = ErroAbsoluto(d2,a)
+      pause()
       disp("\nAltura Max:")
       max = F(PFD(E,a,k,y),a)
+      if(F(PFD(E,a,k,y),a)<=2)
+      disp("\nO foguete nao ira explodir")
+      else
+      disp("\nO foguete ira explodir")
+      endif
   case 2
     
     nf = input("\nDigite o numero de foguetes ")
@@ -40,29 +41,29 @@ switch(choice)
       E = input("Digite o E do foguete ");
       [k y] = F1(a);
       [n m] = Fase1(a);
-      if(F(PFD(E,a,k,y),a)<=2)
-        disp("\nO foguete nao ira explodir")
-      else
-        disp("\nO foguete ira explodir")
-      endif
       disp("Isolamento:")
       disp(n)
       disp(m)
       disp("\nDistancia:")
       disp("\nPosicao Falsa:")
       d = PosicaoFalsa(E,a,n,m)
-      disp("Erro")
       erro = ErroAbsoluto(d,a)
+      pause()
       disp("\nNewton-Raphson")
       d1 = NewtonRaphson(E,a,m)
-      disp("Erro:")
       erro1 = ErroAbsoluto(d1,a)
+      pause
       disp("\nNewton-Raphson Mod")
       d2 = NewtonRaphsonMod(E,a,m)
-      disp("Erro:")
       erro2 = ErroAbsoluto(d2,a)
+      pause()
       disp("\nAltura Max:")
       max = F(PFD(E,a,k,y),a)
+      if(F(PFD(E,a,k,y),a)<=2)
+      disp("\nO foguete nao ira explodir")
+      else
+      disp("\nO foguete ira explodir")
+      endif
     endfor
   case 3
     disp("\nValor maximo de a")

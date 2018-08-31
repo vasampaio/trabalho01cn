@@ -1,11 +1,14 @@
 function [x] = PosicaoFalsa(E,a,n,m)
   I = m-n;
   h=1;
+  printf("\n-----------------------------------------------------------------------------------------\n");
+  printf("h\ta\tf(a)\t\tb\tf(b)\t\tx\t\tf(x)\t\tI");
   while(I>E)
     x = ((n*F(m,a))-(m*F(n,a)))/(F(m,a)-F(n,a));
     f = F(x,a);
+    printf("\n%d\t%d\t%d\t%d\t%d\t%d\t\t%d\t%d\n",h,n,F(n,a),m,F(m,a),x,f,I);
     if(abs(f)<E)
-      h
+      printf("\n-----------------------------------------------------------------------------------------\n");
       return
     endif
     if(f*F(n,a)>0)
@@ -16,5 +19,5 @@ function [x] = PosicaoFalsa(E,a,n,m)
     I = m-n;
     h++;
   endwhile
-  h
+  printf("\n-----------------------------------------------------------------------------------------\n");
 endfunction
