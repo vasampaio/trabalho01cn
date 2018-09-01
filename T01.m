@@ -17,13 +17,13 @@ switch(choice)
       erro = ErroAbsoluto(d,a)
       pause()
       disp("\nNewton-Raphson")
-      d1 = NewtonRaphson(E,a,m)
+      d1 = NewtonRaphson(E,a,n,m)
       erro1 = ErroAbsoluto(d1,a)
       pause
       disp("\nNewton-Raphson Mod")
-      d2 = NewtonRaphsonMod(E,a,m)
+      d2 = NewtonRaphsonMod(E,a,n,m)
       erro2 = ErroAbsoluto(d2,a)
-      pause()
+      
       disp("\nAltura Max:")
       max = F(PFD(E,a,k,y),a)
       if(F(PFD(E,a,k,y),a)<=2)
@@ -50,13 +50,13 @@ switch(choice)
       erro = ErroAbsoluto(d,a)
       pause()
       disp("\nNewton-Raphson")
-      d1 = NewtonRaphson(E,a,m)
+      d1 = NewtonRaphson(E,a,n,m)
       erro1 = ErroAbsoluto(d1,a)
       pause
       disp("\nNewton-Raphson Mod")
-      d2 = NewtonRaphsonMod(E,a,m)
+      d2 = NewtonRaphsonMod(E,a,n,m)
       erro2 = ErroAbsoluto(d2,a)
-      pause()
+      
       disp("\nAltura Max:")
       max = F(PFD(E,a,k,y),a)
       if(F(PFD(E,a,k,y),a)<=2)
@@ -66,6 +66,7 @@ switch(choice)
       endif
     endfor
   case 3
+    %TesteA
     disp("\nValor maximo de a")
     max = Amax()
   otherwise
