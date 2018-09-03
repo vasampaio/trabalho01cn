@@ -66,7 +66,7 @@ switch(choice)
       endif
     endfor
   case 3
-    %TesteA
+    TesteA
     disp("\nValor maximo de a")
     max = Amax()
   otherwise
