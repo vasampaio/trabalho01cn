@@ -1,5 +1,5 @@
 function [x] = NewtonRaphsonMod(E,a,n,m)
-  x = ((n*F(m,a))-(m*F(n,a)))/(F(m,a)-F(n,a));
+  x = (n+m)/2;
   f = F(x,a);
   df = dF(x,a);
   h=1;

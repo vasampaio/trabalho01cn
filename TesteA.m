@@ -13,11 +13,12 @@ function [] = TesteA() %não funciona direito ainda, tá imprimindo errado
     j++;
   endfor
   clc
-  format short e
+  %format short e
   printf("\n-----------------------------------------------------------------------------------------\n");
-  printf("A\t\tPF\t\tNR\t\tNRM\t\tMAX\n");
+  printf("\tA\tPF\t\tNR\tNRM\t\tMAX\n");
   C = [A' PF' NR' NRM' MAX'];
-  disp(real(C))
+  disp(C)
+  %disp(real(C))
   printf("\n-----------------------------------------------------------------------------------------\n");
-  format
+  %format
 endfunction
