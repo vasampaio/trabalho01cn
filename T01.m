@@ -2,37 +2,37 @@
 choice = input("\nEscolha uma opcao:\n1 para rodar teste padrao\n2 para rodar teste customizado\n3 para calcular o valor maximo de a\n")
 
 switch(choice)
-  case 1
+  case 1 %Teste padrao a=1 e E 10^-5
     a=1;
     E=0.00001;
-    [k y] = F1(a);
-    [n m] = Fase1(a);
+    [k y] = F1(a); %Chama a fun鈬o que faz o isolamento da derivada da fun鈬o
+    [n m] = Fase1(a); %Chama a fun鈬o que faz o isolamento para a fun鈬o
     
-      disp("Isolamento:")
+      disp("Isolamento:") %Mostra o isolamento
       disp(n)
       disp(m)
       disp("\nDistancia:")
       disp("\nPosicao Falsa:")
-      d = PosicaoFalsa(E,a,n,m)
-      erro = ErroAbsoluto(d,a)
+      d = PosicaoFalsa(E,a,n,m) % Chama a fun鈬o que calcula a raiz via posi鈬o falsa, ela recebe o isolamento o a e o E
+      erro = ErroAbsoluto(d,a) % Chama a fun鈬o que calcula o erro absoluto
       pause()
       disp("\nNewton-Raphson")
-      d1 = NewtonRaphson(E,a,n,m)
+      d1 = NewtonRaphson(E,a,n,m) % Chama a fun鈬o que calcula a raiz via NewtonRaphson
       erro1 = ErroAbsoluto(d1,a)
       pause
       disp("\nNewton-Raphson Mod")
-      d2 = NewtonRaphsonMod(E,a,n,m)
+      d2 = NewtonRaphsonMod(E,a,n,m) % Chama a fun鈬o que calcula a raiz via NewtonRaphsonMod
       erro2 = ErroAbsoluto(d2,a)
       
       disp("\nAltura Max:")
-      max = F(PFD(E,a,k,y),a)
-      if(F(PFD(E,a,k,y),a)<=2)
+      max = F(PFD(E,a,k,y),a) % Calcula a altura maxima chamando a fun鈬o que calcula a raiz da derivada e aplica o resultado na fun鈬o F
+      if(max<=2) % Testa se o foguete vai explodir ou n縊
       disp("\nO foguete nao ira explodir")
       else
       disp("\nO foguete ira explodir")
       endif
-  case 2
-    
+  case 2 % Recebe um numero variavel de foguete cada um com seu a e E informados pelo usuario
+    % a logica ・a mesma do caso 1
     nf = input("\nDigite o numero de foguetes ")
     for i=1:nf
       disp("\n")
@@ -65,10 +65,10 @@ switch(choice)
       disp("\nO foguete ira explodir")
       endif
     endfor
-  case 3
-    TesteA
+  case 3 % Testa diferentes valores de a e me diz o valor maximo em que n縊 h・explos縊
+    TesteA % Testa valores diferentes de a
     disp("\nValor maximo de a")
-    max = Amax()
+    max = Amax() % Calcula o valor maximo de a
   otherwise
     disp("Opcao nao valida")
 endswitch
