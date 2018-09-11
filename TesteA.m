@@ -1,8 +1,8 @@
-function [] = TesteA() %não funciona direito ainda, tá imprimindo errado
-  E=0.00001;
+function [] = TesteA() %Calula varios metodos para diferentes a
+  E=0.00001; % precisão 10^-5
   h=1;
   j = 1;
-  for i=-5:0.5:5
+  for i=-5:0.5:5 % Cria um vetor para cada metodo e calcula o a de -5 até 5 com passo de 0.5
     A(j) = i;
     [n m] = Fase1(i);
     [k y] = F1(i);
@@ -12,11 +12,11 @@ function [] = TesteA() %não funciona direito ainda, tá imprimindo errado
     MAX(j) = F(PFD(E,i,k,y),i);
     j++;
   endfor
-  clc
+  clc % limpa a tela
   %format short e
   printf("\n-----------------------------------------------------------------------------------------\n");
   printf("\tA\tPF\t\tNR\tNRM\t\tMAX\n");
-  C = [A' PF' NR' NRM' MAX'];
+  C = [A' PF' NR' NRM' MAX'];% cria uma matriz com todos os metodos e a imprime
   disp(C)
   %disp(real(C))
   printf("\n-----------------------------------------------------------------------------------------\n");
