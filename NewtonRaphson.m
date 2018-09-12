@@ -1,5 +1,5 @@
-function [x] = NewtonRaphson(E,a,n,m) %Calculo da raiz via NewtonRaphson, recebe a precisão o a e o intervalo
-  x = (n+m)/2; % o x0 a ser testado é o ponto medio do intervalo
+function [x] = NewtonRaphson(E,a,n,m) %Calculo da raiz via NewtonRaphson, recebe a precisso o a e o intervalo
+  x = (n+m)/2; % o x0 a ser testado e o ponto medio do intervalo
   f = F(x,a); % cal do f(x0)
   h=1;
   printf("\n-----------------------------------------------------------------------------------------\n");
