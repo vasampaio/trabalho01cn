@@ -15,10 +15,12 @@ switch(choice)
       disp("\nPosicao Falsa:")
       d = PosicaoFalsa(E,a,n,m) % Chama a funcao que calcula a raiz via posicao falsa, ela recebe o isolamento o a e o E
       erro = ErroAbsoluto(d,a) % Chama a funcao que calcula o erro absoluto
+      disp("\nAperte qualquer tecla para continuar...\n")
       pause()
       disp("\nNewton-Raphson")
       d1 = NewtonRaphson(E,a,n,m) % Chama a funcao que calcula a raiz via NewtonRaphson
       erro1 = ErroAbsoluto(d1,a)
+      disp("\nAperte qualquer tecla para continuar...\n")
       pause
       disp("\nNewton-Raphson Mod")
       d2 = NewtonRaphsonMod(E,a,n,m) % Chama a funcao que calcula a raiz via NewtonRaphsonMod
@@ -48,10 +50,12 @@ switch(choice)
       disp("\nPosicao Falsa:")
       d = PosicaoFalsa(E,a,n,m)
       erro = ErroAbsoluto(d,a)
+      disp("\nAperte qualquer tecla para continuar...\n")
       pause()
       disp("\nNewton-Raphson")
       d1 = NewtonRaphson(E,a,n,m)
       erro1 = ErroAbsoluto(d1,a)
+      disp("\nAperte qualquer tecla para continuar...\n")
       pause
       disp("\nNewton-Raphson Mod")
       d2 = NewtonRaphsonMod(E,a,n,m)
