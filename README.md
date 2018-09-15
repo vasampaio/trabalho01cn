@@ -10,3 +10,6 @@ Trabalho 01 Calculo Numérico Equipe:  やめてお姉ちゃん
 Tema 1
 
 Basta rodar o arquivo T01.m no octave.
+
+
+P.S. Favor não traduzir o nome da equipe
